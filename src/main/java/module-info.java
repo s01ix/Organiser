@@ -10,6 +10,7 @@ module org.github.s01ix.organiser {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
 
     opens org.github.s01ix.organiser to javafx.fxml;
     exports org.github.s01ix.organiser;
