@@ -8,12 +8,12 @@ import java.util.Properties;
 
 public final class DBManager {
 
-    private static final String PROPERTIESSFILE = "/db.properties";
+    private static final String PROPERTIESSFILEPATH = "/db.properties";
     private static final Properties props = new Properties();
 
     static {
-        try (var in = DBManager.class.getResourceAsStream(PROPERTIESSFILE)) {
-            if (in == null) throw new IllegalStateException("No file " + PROPERTIESSFILE);
+        try (var in = DBManager.class.getResourceAsStream(PROPERTIESSFILEPATH)) {
+            if (in == null) throw new IllegalStateException("No file " + PROPERTIESSFILEPATH);
             props.load(in);
         } catch (Exception e) {
             throw new ExceptionInInitializerError(e);
